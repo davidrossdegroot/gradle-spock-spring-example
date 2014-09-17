@@ -28,13 +28,13 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.347s</div>
+<div class="counter">0.113s</div>
 <p>duration</p>
 </div>
 </td>
@@ -43,8 +43,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">50%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -54,77 +54,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="rootUrlPopulatesViewModel"></a>
-<h3 class="failures">rootUrlPopulatesViewModel</h3>
-<span class="code">
-<pre>java.lang.AssertionError: Model attribute 'menuItems'
-Expected: a collection with size &lt;3&gt;
-     got: null
-
-	at org.springframework.test.util.MatcherAssertionErrors.assertThat(MatcherAssertionErrors.java:76)
-	at org.springframework.test.web.servlet.result.ModelResultMatchers$1.match(ModelResultMatchers.java:56)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:141)
-	at com.yummynoodlebar.web.controller.SiteIntegrationTest.rootUrlPopulatesViewModel(SiteIntegrationTest.java:72)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:80)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:47)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:49)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:103)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:355)
-	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:66)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
-	at java.lang.Thread.run(Thread.java:695)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -135,56 +71,60 @@ Expected: a collection with size &lt;3&gt;
 </tr>
 </thead>
 <tr>
-<td class="failures">rootUrlPopulatesViewModel</td>
-<td>0.208s</td>
-<td class="failures">failed</td>
+<td class="success">rootUrlPopulatesViewModel</td>
+<td>0.059s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">rootUrlforwardsCorrectly</td>
-<td>0.139s</td>
+<td>0.054s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2014-09-15 14:45:22 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
-2014-09-15 14:45:22 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
-2014-09-15 14:45:22 INFO  StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:179 - Mapped &quot;{[/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public java.lang.String com.yummynoodlebar.web.controller.SiteController.getCurrentMenu(org.springframework.ui.Model)
-2014-09-15 14:45:22 DEBUG RequestMappingHandlerAdapter:618 - Looking for controller advice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@21353d27
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:118 - Initializing servlet ''
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:112 - Initializing new StandardServletEnvironment
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:107 - Adding [servletConfigInitParams] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:107 - Adding [servletContextInitParams] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:107 - Adding [jndiProperties] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:116 - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
-2014-09-15 14:45:22 INFO  MockServletContext:390 - Initializing Spring FrameworkServlet ''
-2014-09-15 14:45:22 INFO  TestDispatcherServlet:454 - FrameworkServlet '': initialization started
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:467 - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:482 - Using LocaleResolver [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@3c7038b9]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:504 - Using ThemeResolver [org.springframework.web.servlet.theme.FixedThemeResolver@6b9c18ae]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:642 - Using RequestToViewNameTranslator [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@55187eb3]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:704 - Using FlashMapManager [org.springframework.web.servlet.support.SessionFlashMapManager@3b26456a]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:533 - Published WebApplicationContext of servlet '' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.]
-2014-09-15 14:45:22 INFO  TestDispatcherServlet:473 - FrameworkServlet '': initialization completed in 2 ms
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:139 - Servlet '' configured successfully
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:823 - DispatcherServlet with name '' processing GET request for [/]
-2014-09-15 14:45:22 DEBUG StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:220 - Looking up handler method for path /
-2014-09-15 14:45:22 DEBUG StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:227 - Returning handler method [public java.lang.String com.yummynoodlebar.web.controller.SiteController.getCurrentMenu(org.springframework.ui.Model)]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:912 - Last-Modified value for [/] is: -1
-2014-09-15 14:45:22 DEBUG SiteController:39 - Yummy MenuItemDetails to home view
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:1206 - Rendering view [org.springframework.web.servlet.view.InternalResourceView: unnamed; URL [/WEB-INF/views/home.html]] in DispatcherServlet with name ''
-2014-09-15 14:45:22 DEBUG InternalResourceView:373 - Added model object 'basket' of type [com.yummynoodlebar.web.domain.Basket$$EnhancerByMockitoWithCGLIB$$9bb161b7] to request in view with name 'null'
-2014-09-15 14:45:22 DEBUG InternalResourceView:373 - Added model object 'menu items' of type [java.util.ArrayList] to request in view with name 'null'
-2014-09-15 14:45:22 DEBUG InternalResourceView:373 - Added model object 'org.springframework.validation.BindingResult.basket' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'null'
-2014-09-15 14:45:22 DEBUG InternalResourceView:236 - Forwarding to resource [/WEB-INF/views/home.html] in InternalResourceView 'null'
-2014-09-15 14:45:22 DEBUG MockRequestDispatcher:66 - MockRequestDispatcher: forwarding to [/WEB-INF/views/home.html]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:966 - Successfully completed request
+<pre>2014-09-17 11:32:50 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2014-09-17 11:32:50 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2014-09-17 11:32:50 INFO  StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:179 - Mapped &quot;{[/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public java.lang.String com.yummynoodlebar.web.controller.SiteController.getCurrentMenu(org.springframework.ui.Model)
+2014-09-17 11:32:50 DEBUG DefaultTraversableResolver:74 - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2014-09-17 11:32:50 DEBUG ConfigurationImpl:120 - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2014-09-17 11:32:50 DEBUG ValidationXmlParser:88 - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2014-09-17 11:32:50 DEBUG ValidationXmlParser:95 - No META-INF/validation.xml found. Using annotation based configuration only.
+2014-09-17 11:32:50 DEBUG RequestMappingHandlerAdapter:618 - Looking for controller advice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@ddc1182
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:118 - Initializing servlet ''
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:112 - Initializing new StandardServletEnvironment
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:107 - Adding [servletConfigInitParams] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:107 - Adding [servletContextInitParams] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:107 - Adding [jndiProperties] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:116 - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+2014-09-17 11:32:50 INFO  MockServletContext:390 - Initializing Spring FrameworkServlet ''
+2014-09-17 11:32:50 INFO  TestDispatcherServlet:454 - FrameworkServlet '': initialization started
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:467 - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:482 - Using LocaleResolver [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@563803f0]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:504 - Using ThemeResolver [org.springframework.web.servlet.theme.FixedThemeResolver@159b3a90]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:642 - Using RequestToViewNameTranslator [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5b49806b]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:704 - Using FlashMapManager [org.springframework.web.servlet.support.SessionFlashMapManager@750cdd5e]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:533 - Published WebApplicationContext of servlet '' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.]
+2014-09-17 11:32:50 INFO  TestDispatcherServlet:473 - FrameworkServlet '': initialization completed in 2 ms
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:139 - Servlet '' configured successfully
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:823 - DispatcherServlet with name '' processing GET request for [/]
+2014-09-17 11:32:50 DEBUG StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:220 - Looking up handler method for path /
+2014-09-17 11:32:50 DEBUG StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:227 - Returning handler method [public java.lang.String com.yummynoodlebar.web.controller.SiteController.getCurrentMenu(org.springframework.ui.Model)]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:912 - Last-Modified value for [/] is: -1
+2014-09-17 11:32:50 DEBUG SiteController:37 - Yummy MenuItemDetails to home view
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:1206 - Rendering view [org.springframework.web.servlet.view.InternalResourceView: unnamed; URL [/WEB-INF/views/home.html]] in DispatcherServlet with name ''
+2014-09-17 11:32:50 DEBUG InternalResourceView:373 - Added model object 'basket' of type [com.yummynoodlebar.web.domain.Basket$$EnhancerByMockitoWithCGLIB$$3c3f07a1] to request in view with name 'null'
+2014-09-17 11:32:50 DEBUG InternalResourceView:373 - Added model object 'menuItems' of type [java.util.ArrayList] to request in view with name 'null'
+2014-09-17 11:32:50 DEBUG InternalResourceView:373 - Added model object 'org.springframework.validation.BindingResult.basket' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'null'
+2014-09-17 11:32:50 DEBUG InternalResourceView:236 - Forwarding to resource [/WEB-INF/views/home.html] in InternalResourceView 'null'
+2014-09-17 11:32:50 DEBUG MockRequestDispatcher:66 - MockRequestDispatcher: forwarding to [/WEB-INF/views/home.html]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:966 - Successfully completed request
 
 MockHttpServletRequest:
          HTTP Method = GET
@@ -207,10 +147,10 @@ MockHttpServletRequest:
            View name = /home
                 View = null
            Attribute = basket
-               value = basked
+               value = basket
               errors = []
-           Attribute = menu items
-               value = [com.yummynoodlebar.web.domain.MenuItem@6cc2060e, com.yummynoodlebar.web.domain.MenuItem@361bb8ea, com.yummynoodlebar.web.domain.MenuItem@72b81eaa]
+           Attribute = menuItems
+               value = [com.yummynoodlebar.web.domain.MenuItem@10ebd44f, com.yummynoodlebar.web.domain.MenuItem@6abf9736, com.yummynoodlebar.web.domain.MenuItem@486090fa]
 
             FlashMap:
 
@@ -223,42 +163,46 @@ MockHttpServletResponse:
        Forwarded URL = /WEB-INF/views/home.html
       Redirected URL = null
              Cookies = []
-2014-09-15 14:45:22 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
-2014-09-15 14:45:22 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
-2014-09-15 14:45:22 INFO  StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:179 - Mapped &quot;{[/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public java.lang.String com.yummynoodlebar.web.controller.SiteController.getCurrentMenu(org.springframework.ui.Model)
-2014-09-15 14:45:22 DEBUG RequestMappingHandlerAdapter:618 - Looking for controller advice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@60e1e567
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:118 - Initializing servlet ''
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:112 - Initializing new StandardServletEnvironment
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:107 - Adding [servletConfigInitParams] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:107 - Adding [servletContextInitParams] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:107 - Adding [jndiProperties] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
-2014-09-15 14:45:22 DEBUG StandardServletEnvironment:116 - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
-2014-09-15 14:45:22 INFO  MockServletContext:390 - Initializing Spring FrameworkServlet ''
-2014-09-15 14:45:22 INFO  TestDispatcherServlet:454 - FrameworkServlet '': initialization started
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:467 - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:482 - Using LocaleResolver [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@5ade5cd9]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:504 - Using ThemeResolver [org.springframework.web.servlet.theme.FixedThemeResolver@3ca1d92a]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:642 - Using RequestToViewNameTranslator [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@25b8737f]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:704 - Using FlashMapManager [org.springframework.web.servlet.support.SessionFlashMapManager@70a6aa31]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:533 - Published WebApplicationContext of servlet '' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.]
-2014-09-15 14:45:22 INFO  TestDispatcherServlet:473 - FrameworkServlet '': initialization completed in 2 ms
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:139 - Servlet '' configured successfully
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:823 - DispatcherServlet with name '' processing GET request for [/]
-2014-09-15 14:45:22 DEBUG StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:220 - Looking up handler method for path /
-2014-09-15 14:45:22 DEBUG StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:227 - Returning handler method [public java.lang.String com.yummynoodlebar.web.controller.SiteController.getCurrentMenu(org.springframework.ui.Model)]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:912 - Last-Modified value for [/] is: -1
-2014-09-15 14:45:22 DEBUG SiteController:39 - Yummy MenuItemDetails to home view
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:1206 - Rendering view [org.springframework.web.servlet.view.InternalResourceView: unnamed; URL [/WEB-INF/views/home.html]] in DispatcherServlet with name ''
-2014-09-15 14:45:22 DEBUG InternalResourceView:373 - Added model object 'basket' of type [com.yummynoodlebar.web.domain.Basket$$EnhancerByMockitoWithCGLIB$$9bb161b7] to request in view with name 'null'
-2014-09-15 14:45:22 DEBUG InternalResourceView:373 - Added model object 'menu items' of type [java.util.ArrayList] to request in view with name 'null'
-2014-09-15 14:45:22 DEBUG InternalResourceView:373 - Added model object 'org.springframework.validation.BindingResult.basket' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'null'
-2014-09-15 14:45:22 DEBUG InternalResourceView:236 - Forwarding to resource [/WEB-INF/views/home.html] in InternalResourceView 'null'
-2014-09-15 14:45:22 DEBUG MockRequestDispatcher:66 - MockRequestDispatcher: forwarding to [/WEB-INF/views/home.html]
-2014-09-15 14:45:22 DEBUG TestDispatcherServlet:966 - Successfully completed request
+2014-09-17 11:32:50 DEBUG StandardEnvironment:112 - Initializing new StandardEnvironment
+2014-09-17 11:32:50 DEBUG StandardEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardEnvironment:116 - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2014-09-17 11:32:50 INFO  StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:179 - Mapped &quot;{[/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}&quot; onto public java.lang.String com.yummynoodlebar.web.controller.SiteController.getCurrentMenu(org.springframework.ui.Model)
+2014-09-17 11:32:50 DEBUG DefaultTraversableResolver:74 - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2014-09-17 11:32:50 DEBUG ConfigurationImpl:120 - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2014-09-17 11:32:50 DEBUG ValidationXmlParser:88 - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2014-09-17 11:32:50 DEBUG ValidationXmlParser:95 - No META-INF/validation.xml found. Using annotation based configuration only.
+2014-09-17 11:32:50 DEBUG RequestMappingHandlerAdapter:618 - Looking for controller advice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@61f2ba18
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:118 - Initializing servlet ''
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:112 - Initializing new StandardServletEnvironment
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:107 - Adding [servletConfigInitParams] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:107 - Adding [servletContextInitParams] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:107 - Adding [jndiProperties] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:107 - Adding [systemProperties] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:107 - Adding [systemEnvironment] PropertySource with lowest search precedence
+2014-09-17 11:32:50 DEBUG StandardServletEnvironment:116 - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+2014-09-17 11:32:50 INFO  MockServletContext:390 - Initializing Spring FrameworkServlet ''
+2014-09-17 11:32:50 INFO  TestDispatcherServlet:454 - FrameworkServlet '': initialization started
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:467 - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:482 - Using LocaleResolver [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@55ea8912]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:504 - Using ThemeResolver [org.springframework.web.servlet.theme.FixedThemeResolver@3c0920e0]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:642 - Using RequestToViewNameTranslator [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1f2305e5]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:704 - Using FlashMapManager [org.springframework.web.servlet.support.SessionFlashMapManager@d4ec36]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:533 - Published WebApplicationContext of servlet '' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.]
+2014-09-17 11:32:50 INFO  TestDispatcherServlet:473 - FrameworkServlet '': initialization completed in 3 ms
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:139 - Servlet '' configured successfully
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:823 - DispatcherServlet with name '' processing GET request for [/]
+2014-09-17 11:32:50 DEBUG StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:220 - Looking up handler method for path /
+2014-09-17 11:32:50 DEBUG StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping:227 - Returning handler method [public java.lang.String com.yummynoodlebar.web.controller.SiteController.getCurrentMenu(org.springframework.ui.Model)]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:912 - Last-Modified value for [/] is: -1
+2014-09-17 11:32:50 DEBUG SiteController:37 - Yummy MenuItemDetails to home view
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:1206 - Rendering view [org.springframework.web.servlet.view.InternalResourceView: unnamed; URL [/WEB-INF/views/home.html]] in DispatcherServlet with name ''
+2014-09-17 11:32:50 DEBUG InternalResourceView:373 - Added model object 'basket' of type [com.yummynoodlebar.web.domain.Basket$$EnhancerByMockitoWithCGLIB$$3c3f07a1] to request in view with name 'null'
+2014-09-17 11:32:50 DEBUG InternalResourceView:373 - Added model object 'menuItems' of type [java.util.ArrayList] to request in view with name 'null'
+2014-09-17 11:32:50 DEBUG InternalResourceView:373 - Added model object 'org.springframework.validation.BindingResult.basket' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'null'
+2014-09-17 11:32:50 DEBUG InternalResourceView:236 - Forwarding to resource [/WEB-INF/views/home.html] in InternalResourceView 'null'
+2014-09-17 11:32:50 DEBUG MockRequestDispatcher:66 - MockRequestDispatcher: forwarding to [/WEB-INF/views/home.html]
+2014-09-17 11:32:50 DEBUG TestDispatcherServlet:966 - Successfully completed request
 
 MockHttpServletRequest:
          HTTP Method = GET
@@ -281,10 +225,10 @@ MockHttpServletRequest:
            View name = /home
                 View = null
            Attribute = basket
-               value = basked
+               value = basket
               errors = []
-           Attribute = menu items
-               value = [com.yummynoodlebar.web.domain.MenuItem@3d2da4a6, com.yummynoodlebar.web.domain.MenuItem@7f94adaa, com.yummynoodlebar.web.domain.MenuItem@7a15b555]
+           Attribute = menuItems
+               value = [com.yummynoodlebar.web.domain.MenuItem@2b5cf9de, com.yummynoodlebar.web.domain.MenuItem@6518740f, com.yummynoodlebar.web.domain.MenuItem@286bb8a3]
 
             FlashMap:
 
@@ -303,7 +247,7 @@ MockHttpServletResponse:
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 1.6</a> at Sep 15, 2014 2:45:22 PM</p>
+<a href="http://www.gradle.org">Gradle 1.6</a> at Sep 17, 2014 11:32:50 AM</p>
 </div>
 </div>
 </body>

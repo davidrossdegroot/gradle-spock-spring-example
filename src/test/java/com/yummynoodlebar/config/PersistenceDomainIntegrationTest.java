@@ -8,25 +8,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.yummynoodlebar.core.services.MenuService;
 import com.yummynoodlebar.events.menu.AllMenuItemsEvent;
 import com.yummynoodlebar.events.menu.RequestAllMenuItemsEvent;
+import com.yummynoodlebar.persistence.services.MenuPersistenceService;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {PersistenceConfig.class, CoreConfig.class})
-public class CoreDomainIntegrationTest {
+@ContextConfiguration(classes = {PersistenceConfig.class})
+public class PersistenceDomainIntegrationTest {
 	
 	@Autowired
-	MenuService menuService;
-			
+	MenuPersistenceService menuPersistenceService;
+		
 	@Test
 	public void thatAllMenuItemsReturned() {
 		
-	AllMenuItemsEvent allMenuItems = menuService.requestAllMenuItems(new RequestAllMenuItemsEvent());
+	AllMenuItemsEvent allMenuItems = menuPersistenceService.requestAllMenuItems(new RequestAllMenuItemsEvent());
 	
 	assertEquals(3, allMenuItems.getMenuItemDetails().size());
 			
-	}	
+	}
 
 }

@@ -14,32 +14,32 @@ import com.yummynoodlebar.web.domain.MenuItem;
 @Controller
 public class BasketCommandController {
 
-				    private static final Logger LOG = LoggerFactory.getLogger(BasketCommandController.class);
-
-						    @Autowired
-												    private Basket basket;
-
-								    @RequestMapping(value = "/removeFromBasket" , method = RequestMethod.POST)
-
-														    public String remove(@ModelAttribute("fred") MenuItem menuItem) {
-																				        LOG.debug("Remove {} from the basket", menuItem.getId());
-																								        basket.delete(menuItem.getId());
-																												        return "redirect:/showBasket";
-																																    }
-
-										    @RequestMapping(value = "/addToBasket" , method = RequestMethod.POST)
-
-																    public String add(@ModelAttribute("joe") MenuItem menuItem) {
-																						        LOG.debug("Add {} from the basket", menuItem.getId());
-																										        basket.add(menuItem);
-																														        return "redirect:/";
-																																		    }
-
-
-
-												    @ModelAttribute("basket")
-																		    private Basket getBasket() {
-																								        return basket;
-																												    }
+	private static final Logger LOG = LoggerFactory.getLogger(BasketCommandController.class);
+			
+	@Autowired
+	private Basket basket;
+		
+	@RequestMapping(value = "/removeFromBasket" , method = RequestMethod.POST)
+	
+	public String remove(@ModelAttribute("fred") MenuItem menuItem) {
+		LOG.debug("Remove {} from the basket", menuItem.getId());
+		basket.delete(menuItem.getId());
+		return "redirect:/showBasket";
+	}
+	
+	@RequestMapping(value = "/addToBasket" , method = RequestMethod.POST)
+	
+	public String add(@ModelAttribute("joe") MenuItem menuItem) {
+		LOG.debug("Add {} from the basket", menuItem.getId());
+		basket.add(menuItem);
+		return "redirect:/";
+	}
+			
+	
+	
+	@ModelAttribute("basket")
+	private Basket getBasket() {
+		return basket;
+	}
 
 }
