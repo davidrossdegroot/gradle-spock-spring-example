@@ -54,7 +54,7 @@ dependencies {
 	testCompile "org.mockito:mockito-core:1.9.5"
 	testCompile "org.hamcrest:hamcrest-library:1.3"
 	
-  // testCompile "org.mockito:mockito-all:1.9.5" // added to see if this was the problem
+  testCompile "org.mockito:mockito-all:1.9.5" // added to see if this was the problem
 	provided 'javax.servlet:javax.servlet-api:3.0.1'
 }
 
