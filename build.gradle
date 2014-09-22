@@ -106,7 +106,6 @@ drivers.each { driver ->
 
         systemProperty "geb.build.reportsDir", reporting.file("$name/geb")
         systemProperty "geb.env", driver
-
         // If you wanted to set the baseUrl in your build…
         // systemProperty "geb.build.baseUrl", "http://myapp.com"
     }
@@ -114,7 +113,6 @@ drivers.each { driver ->
 
 chromeTest {
     dependsOn unzipChromeDriver
-
     def chromedriverFilename = Os.isFamily(Os.FAMILY_WINDOWS) ? "chromedriver.exe" : "chromedriver"
     systemProperty "webdriver.chrome.driver", new File(unzipChromeDriver.outputs.files.singleFile, chromedriverFilename).absolutePath
 }
