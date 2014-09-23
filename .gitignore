@@ -16,6 +16,10 @@ target/
 .settings/
 bin/
 
+# Vim
+*.swp
+
+
 # IDEA
 *.iws
 *.ipr

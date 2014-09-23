@@ -1,6 +1,7 @@
 import geb.spock.GebReportingSpec
-//import geb.spock.GebSpec
+import spock.lang.*
 
+import pages.*
 
 class YummyNoodleSpec extends GebReportingSpec {
 
@@ -26,7 +27,18 @@ class YummyNoodleSpec extends GebReportingSpec {
 				title == "Spring"
 }
 */
-		def "choose a menu item"() {
+def "enter the details"() {
+		when:
+		to YummyNoodleHomePage
+		itemId = "YN2"
+		addToBasket.click()
+		and:
+		showBasketLargeButton.click()
+		then:
+		at YummyNoodleHomePage
+	}
+
+		/*def "choose a menu item"() {
 				when:
 				to YummyNoodleHomePage
 
@@ -35,5 +47,6 @@ class YummyNoodleSpec extends GebReportingSpec {
 
 				then:
 				showBasketLargeButton.exists()
-}
+*/
+
 }
