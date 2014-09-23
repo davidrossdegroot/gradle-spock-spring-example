@@ -21,3 +21,5 @@ bin/
 *.ipr
 *.iml
 out/
+
+.DS*
